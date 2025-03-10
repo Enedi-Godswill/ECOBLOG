@@ -1,0 +1,153 @@
+/* navbar */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem;
+}
+
+/* navbar javaScript styling */
+.navbar.active{
+    background:#ffffff00;
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    background:#fff;
+    color:#01441c;
+    padding:10px;
+    border-radius:20px;
+}
+.menu{
+    border:2px solid #fff;
+    color:#fff;
+    border-radius:20px;
+    margin-left:10px;
+    margin-right:10px;
+    padding:10px;
+    text-transform:capitalize;
+    background:#ffffff00;
+    backdrop-filter:blur(10px);
+    font-size:18px;
+    display:flex;
+    gap:10px;
+    z-index:99;
+}
+.menu-btn{
+    display:none;
+}
+
+/* for buttons */
+.all-buttons{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+.menu-btn{
+    display:none;
+}
+.menu-btn img{
+    width:2rem;
+}
+.light-btn img{
+    width:2rem;
+}
+/* javascript styling */
+.light-btn.active .sunny{
+    display:none;
+}
+.light-btn.active .dark{
+    display:flex;
+}
+.open-btn{
+    display:flex;
+}
+.close-btn{
+    display:none;
+}
+.sunny{
+    display:flex;
+}
+.dark{
+    display:none;
+}
+
+/* back to normal styles */
+.screen-lg-hidden{
+    display:none;
+}
+.signup{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#01441c;
+    color:#fff;
+    padding:10px;
+    border-radius:18px;
+    text-transform:capitalize;
+    font-size:20px;
+    width:7rem;
+}
+
+
+@media screen and (max-width:800px){
+    .navbar{
+        background:#ffffff00;
+        backdrop-filter:blur(10px);
+    }
+    .menu{
+        width:100%;
+        padding:10px;
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        background:#fff;
+        color:#000;
+        gap:10px;
+        top:5rem;
+        left:0;
+        right:0;
+        transform:scaleZ(0);
+        opacity:0;
+        transition:.2s ease-in;
+        border:none;
+        border-radius:0%;
+    }
+    .menu li a{
+        font-size:30px;
+    }
+    .screen-lg-hidden{
+        display:flex;
+    }
+    .signup{
+        display:none;
+    }
+
+    /* button styling */
+    .menu-btn{
+        display:flex;
+        align-items:center;
+    }
+    .light-btn{
+        display:flex;
+        align-items:center;
+    }
+
+    /* javascript class styling */
+    .menu.active{
+        transform:scaleZ(1);
+        opacity:1;
+    }
+    .menu-btn.active .open-btn{
+        display:none;
+    }
+    .menu-btn.active .close-btn{
+        display:flex;
+    }
+}
+

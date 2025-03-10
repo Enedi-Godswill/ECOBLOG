@@ -1,0 +1,64 @@
+@import url("./navbar.css");
+@import url("./home.css");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:tahoma;
+}
+html{
+    text-rendering:optimizeLegibility;
+    scroll-behavior:smooth;
+}
+
+/* javascript body styling */
+body{
+    background:#136e00b9;
+    color:#000;
+    transition:.3s ease-in;
+}
+body.active{
+    background:#020066;
+    color:#fff;
+    transition:.3s ease-in;
+}
+
+/* normal reusable classes */
+img{
+    width:100%;
+}
+li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+button{
+    background:none;
+    border:none;
+}
+button,
+a{
+    cursor:pointer;
+}
+input{
+    background:none;
+    outline:none;
+    border:2px solid #2c2c2cd7;
+}
+input::placeholder{
+    color:#000;
+    font-size:18px;
+}
+
+section{
+    margin-top:2rem;
+    padding:2rem;
+}
+.nom-btn{
+    background:#fff;
+    border-radius:50%;
+    padding:5px;
+}
